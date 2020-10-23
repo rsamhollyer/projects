@@ -1,4 +1,7 @@
 import random
+import os
+import time
+
 
 class Cars():
     def __init__(self, name, top_speed, acceration, max_acceleration, position = 0, speed = 0, wheels = 4, nitro = 2):
@@ -100,7 +103,8 @@ class Player(Cars):
                 print(f"Oh no! {self.name} has hit the wall!")
                 self.speed = 0
                 self.position += self.speed
-
+        time.sleep(1.5)
+        os.system('clear')
 
 hero = Player("Thunder", 35, 8,8)
 player2 = Cars("Blaze",25, 10,10)
