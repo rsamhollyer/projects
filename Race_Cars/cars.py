@@ -111,4 +111,3 @@ player2 = Cars("Blaze",25, 10,10)
 player3 = Cars("Inferno", 30, 8,8)
 player4 = Cars("Blizzard", 21, 11,11)
 
-all_cars = [player2, player3, player4, hero]
