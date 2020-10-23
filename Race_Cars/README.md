@@ -1,4 +1,4 @@
-#RACE CARS
+# RACE CARS
 
 This simple simulator runs a 'Drag-Race' type game where the human player races against 3 other computer players.
 
