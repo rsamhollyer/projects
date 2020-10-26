@@ -3,7 +3,7 @@ import inspect
 import time
 from collections import Counter
 import os
-
+from carimage import *
 
 
 
@@ -38,5 +38,5 @@ class Game():
         grab_winner = heat_counter.most_common(1)
         name, position = grab_winner[0]
         print(f"{name} won the race!!. They eneded up going {position} units!!!")
-
+        print(race_car_image_3)
 
