@@ -6,7 +6,7 @@ import os
 
 
 
-new_game = ""
+
 class Game():
     def __init__(self, iterations = 0, acceptable_answers = ["Y", "YES", "NO", "N"]):
         self.iterations = iterations 

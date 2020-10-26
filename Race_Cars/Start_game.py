@@ -8,4 +8,6 @@ for i in ["LET'S RACE!!!",race_car_image_1,race_car_image_2]:#Splash screen when
     time.sleep(1.5)
     os.system('clear')
 
+
+    
 start_game()
