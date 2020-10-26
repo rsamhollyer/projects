@@ -23,12 +23,12 @@ class Game():
                 car.movement()
                 i += 1
                 print(f"{car.name} has driven {car.position} units")
-                time.sleep(.7)
+                time.sleep(1)
                 os.system('clear')
             print(f"{car.name} went {car.position} units")
             
             heat_information[car.name] = car.position
-            time.sleep(.7)
+            time.sleep(1)
             os.system('clear')
         self.winner(heat_information)
     
