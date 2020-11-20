@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Glorp Dashboard</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="./styles/assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./styles/assets/favicon-16x16.png">
+		<link rel="manifest" href="./styles/assets/site.webmanifest">
+		<link rel="stylesheet" href="./styles/styles.css" />
+		<link rel="stylesheet" href="./styles/clockstyles.css" />
+		<link rel="stylesheet" href="./styles/quotesty.css">
+		<link rel="stylesheet" href="./styles/newsstyles.css" />
+
+	</head>
+	<body>
+		<main>
+			<div class="quote-section margin-bottom">
+				<div class="center-button">
+				<button class="refresh-quote">Get New Quote</button>
+			</div>
+			</div>
+
+			<div class="clocks margin-bottom">
+				<div class="analog-clock">
+					<div class="clock-face">
+						<div class="second-hand hand"></div>
+						<div class="minute-hand hand"></div>
+						<div class="hour-hand hand"></div>
+					</div>
+				</div>
+			
+				<div class="digital-clock hidden"></div>
+				<div class="toggle-container"> 
+
+					<label class="toggle-switch">
+						<input type="checkbox" />
+						<span class="slider"></span>
+					</div>
+					
+				</label>
+				<span class='toggle-label'>ANALOG</span>
+			</div>
+			
+			<div class="headline-news margin-bottom">
+				<div class="container">
+					<h4 class = news-title>-Your Daily News-</h4>
+				</div>
+			</div>
+		</main>
+		<script src="./main.js" type="module"></script>
+	</body>
+</html>

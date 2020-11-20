@@ -1,0 +1,31 @@
+.center-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.refresh-quote {
+	border-radius: 50px;
+	background-color: black;
+	color: teal;
+	box-shadow: cornflowerblue;
+}
+
+.quote-section {
+	font-size: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	border-radius: 10px;
+	border: solid black 1px;
+	padding: 10px;
+	box-shadow: 5px 5px 8px teal, 10px 10px 8px pink, 15px 15px 8px blue;
+}
+#quote-paragraph {
+	text-align: center;
+}
+#author-name {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 20px;
+	color: blue;
+	font-weight: bolder;
+}
