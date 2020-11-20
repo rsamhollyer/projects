@@ -1,0 +1,194 @@
+main {
+	display: grid;
+	grid-template-areas:
+		"quotes"
+		"clocks"
+		"news";
+	padding: 1rem;
+	min-height: 100vh;
+}
+
+.clocks {
+	grid-area: clocks;
+	display: grid;
+	justify-items: center;
+	grid-template-areas:
+		"clock"
+		"switch";
+	padding: 0;
+	background: black;
+	opacity: 0.7;
+	border: solid;
+	box-shadow: 20px 20px 45px 10px black;
+	border-radius: 15px;
+	margin-left: 0px;
+}
+.analog-clock {
+	width: 10rem;
+	height: 10rem;
+	border: 5px solid black;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	grid-area: clock;
+}
+
+.digital-clock {
+	grid-area: clock;
+	margin: 5px;
+	padding: 2px;
+	font-family: "Roboto Mono", monospace;
+	font-size: 33px;
+	color: rgb(6, 136, 49);
+	background: black;
+	text-align: center;
+}
+
+.clock-face {
+	position: relative;
+	background-image: url("./assets/clockface.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.toggle-label {
+	color: white;
+}
+.clock-face {
+	filter: brightness(1000%);
+}
+
+.clock-face::after {
+	content: "";
+	position: absolute;
+	background-color: grey;
+	z-index: 15;
+	top: 50%;
+	left: 50%;
+	width: 18px;
+	height: 18px;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.hand {
+	--rotation: 0;
+	position: absolute;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	background-color: grey;
+	z-index: 10;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.second-hand {
+	width: 0.5%;
+	height: 43%;
+	background-color: red;
+}
+
+.minute-hand {
+	width: 2%;
+	height: 40%;
+}
+
+.hour-hand {
+	width: 5%;
+	height: 30%;
+}
+
+/* Toggle from W3 */
+/* The switch - the box around the slider  */
+.toggle-container {
+	grid-area: switch;
+}
+.toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #333;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #333;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #333;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+.quote-section {
+	background: grey;
+	opacity: 0.7;
+	grid-area: quotes;
+}
+
+.headline-news {
+	background: grey;
+	opacity: 0.9;
+	grid-area: news;
+	overflow: auto;
+}
+
+@media only screen and (min-width: 766px) {
+	main {
+		display: grid;
+		grid-template-columns: 66% 34%;
+	}
+	.quote-section {
+		grid-column: span 1;
+	}
+	.headline-news {
+		grid-row: 2/3;
+		grid-column: 1 / span 2;
+	}
+	.clocks {
+		grid-column: 2/3;
+		grid-row: 1/2;
+		margin-left: 15px;
+	}
+}

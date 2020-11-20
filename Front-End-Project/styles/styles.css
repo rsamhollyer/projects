@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap");
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.margin-bottom {
+	margin-bottom: 3rem;
+}
+
+main > img {
+	object-fit: cover;
+}
