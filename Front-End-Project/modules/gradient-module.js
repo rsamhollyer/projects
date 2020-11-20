@@ -13,5 +13,3 @@ export const generateAnImage = () => {
 	//Places the style on page load
 	main.style.background = `linear-gradient(${direction}deg, rgba(${red1},${green1},${blue1}, .7), rgba(${red2},${green2},${blue2},.7))`;
 };
-
-generateAnImage();
